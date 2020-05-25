@@ -1,26 +1,27 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+    sx={{
+      bg: `background`,
+      display: `flex`,
+      justifyContent: `space-between`,
+      alignItems: `center`,
+      width: `100%`,
+      height: `85px`,
+      padding: `0 2rem`,
+      gridColumn: `1 / span 16`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+    <div>
+      <h1 sx={{ margin: 0 }}>
         <Link
           to="/"
-          style={{
-            color: `white`,
+          sx={{
+            color: `text`,
             textDecoration: `none`,
           }}
         >
@@ -28,6 +29,42 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
+
+    <nav
+      sx={{
+        width: `200px`,
+        display: `flex`,
+        justifyContent: `space-between`,
+      }}
+    >
+      <Link
+        to="/"
+        sx={{
+          color: `text`,
+          textDecoration: `none`,
+        }}
+      >
+        Home
+      </Link>
+      <Link
+        to="/blog"
+        sx={{
+          color: `text`,
+          textDecoration: `none`,
+        }}
+      >
+        Blog
+      </Link>
+      <Link
+        to="/about"
+        sx={{
+          color: `text`,
+          textDecoration: `none`,
+        }}
+      >
+        About
+      </Link>
+    </nav>
   </header>
 )
 

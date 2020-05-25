@@ -1,21 +1,27 @@
-import React from "react"
-import { Link } from "gatsby"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { Fragment } from "react"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Ripple from "../components/ripple"
 import SEO from "../components/seo"
+import Hero from "../components/hero"
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <Fragment>
+    <Ripple
+      sx={{
+        position: `absolute`,
+        top: `0`,
+        left: `0`,
+        zIndex: -1,
+      }}
+    />
+    <Layout>
+      <Hero />
+      <SEO title="Home" />
+    </Layout>
+  </Fragment>
 )
 
 export default IndexPage

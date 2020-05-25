@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Legend of Nessa`,
+    description: `My nerd blog about all of the blue things I love: water bending, water-type Pokémon, and Ravenclaw. With a dash of Legend of Zelda to shake things up.`,
+    author: `Janessa Garrow`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,9 +26,9 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
+    }, // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    "gatsby-plugin-theme-ui",
   ],
 }
